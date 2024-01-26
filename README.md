@@ -1,6 +1,6 @@
 # A Tour of Go
 
-**Current step:** https://go.dev/tour/basics/9
+**Current step:** https://go.dev/tour/basics/12
 
 ## Questions/Doubts
 
@@ -44,6 +44,30 @@ go test [file or folder] -v
 
 - The type of a variable comes after the variable name
 - `var` statements can be at package or function level
+- short assignment statements (e.g. `val := 7`):
+  - can be used in place of a `var` declaration with implicit type
+  - are only permitted inside a function
+
+#### Types
+
+**Basic**
+
+- `bool`
+- `string`
+- `int` `int8` `int16` `int32` `int64`
+- `uint` `uint8` `uint16` `uint32` `uint64` `uintptr`
+- `byte` // alias for uint8
+- `rune` // alias for int32, represents a Unicode code point
+- `float32` `float64`
+- `complex64` `complex128`
+
+#### Zero values
+
+Variables declared without an explicit initial value are given their **zero value**:
+
+- `0` for numeric types,
+- `false` for the boolean type
+- `""` (empty string) for strings
 
 #### Functions
 
